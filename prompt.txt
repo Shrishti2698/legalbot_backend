@@ -1,0 +1,85 @@
+simple
+
+*Constitution-focused:*
+What fundamental rights does the Indian Constitution guarantee to women?
+Explain Article 21 with reference to Supreme Court judgments.
+
+*BNS / CrPC-focused:*
+What does Section 125 of CrPC say about maintenance?
+Explain Section 376 of IPC and cite any Supreme Court case related to it.
+*supreme Court case reference:*
+Summarize the verdict of Kesavananda Bharati v. State of Kerala.
+Has the Supreme Court upheld the right to privacy as a fundamental right?
+
+
+
+complex
+
+*Scenario-based legal reasoning:*
+A woman is denied maintenance by her husband. How can she claim her rights under CrPC and which Supreme Court judgments support her case?
+Explain how Article 21 is applied in cases of custodial deaths, citing relevant Supreme Court rulings.
+
+*Cross-referencing legal provisions:*
+Compare the protections under Article 15 and Section 498A IPC. Can you provide Supreme Court examples where both were applied?
+A company is accused of violating environmental laws. Which constitutional provisions and Supreme Court judgments are applicable?
+
+*Constitution + CrPC + BNS interpretation:*
+Under which conditions can preventive detention be applied, and how has the Supreme Court interpreted these conditions in past cases?
+Explain the process of filing a writ petition under Article 32, and mention any landmark Supreme Court decisions.
+
+*Hypothetical legal advice scenario:*
+If someone’s property is seized illegally by a government authority, which constitutional rights are violated, and which Supreme Court judgments can be referred to while filing a petition?
+
+
+
+Hindi Prompts
+
+“क्या मुझे सार्वजनिक जगह पर विरोध प्रदर्शन करने का अधिकार है?”
+(Do I have the right to protest in a public place?)
+
+“तलाक के बाद महिला को गुज़ारे भत्ते के लिए क्या करना चाहिए?”
+(What should a woman do to claim alimony after divorce?)
+
+🔹 Bengali Prompts
+
+“ভারতের সংবিধান অনুযায়ী শিক্ষার অধিকার কি?”
+(What is the right to education as per the Indian Constitution?)
+
+“আমি কীভাবে সুপ্রিম কোর্টে রিট পিটিশন দাখিল করতে পারি?”
+(How can I file a writ petition in the Supreme Court?)
+
+
+
+PROMPTS:
+धारा 354 के अंतर्गत क्या सज़ा है?
+My husband hits me regularly, what legal actions can I take in India?
+( My in-laws are demanding dowry, what sections of law protect me? )
+Explain the process of filing a writ petition under Article 32, and mention any landmark Supreme Court decisions.   (complex)
+
+
+আমি কীভাবে সুপ্রিম কোর্টে রিট পিটিশন দাখিল করতে পারি?
+(How can I file a writ petition in the Supreme Court?)
+
+
+
+cd legal-advisor
+ls 
+cd legal-advisor-frontend
+npm run dev
+
+I have murdered someone. What are the consequences?
+If someone commits murder under Indian law, what legal consequences follow?
+
+
+complex case:
+A woman is denied maintenance by her husband. How can she claim her rights under CrPC and which Supreme Court judgments support her case?
+If the husband argues that personal law applies, how has the Supreme Court addressed this issue?
+What guidelines has the Supreme Court laid down to decide the amount of maintenance?
+
+
+
+STRAY DOG CASE:
+Why did the Supreme Court take suo motu cognizance in the stray dogs case of 2025?
+was that legal?
+why did the court took this decision?
+in which article this comes under?

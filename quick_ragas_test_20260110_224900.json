@@ -1,0 +1,117 @@
+[
+  {
+    "question": "Who is the respondent in the case Union of India vs. Maj. Gen. Manomoy Ganguly?",
+    "ground_truth": "The respondent is Maj. Gen. Manomoy Ganguly.",
+    "generated_answer": "I'm sorry, but I can only assist with Indian legal topics that are specifically related to provisions of the Indian Constitution, IPC, CrPC, BNS 2024, Supreme Court and High Court judgments, and other legal matters within Indian jurisdiction. I do not have information regarding the case you mentioned. If you have questions related to Indian law, feel free to ask!",
+    "contexts": [
+      "IN  THE  HIGH  COURT  OF  DELHI  AT  NEW  DELHI \nSUBJECT  : EXAMINATION MATTER \nDate of decision:   13th July, 2012 \nLPA No.229/2011 \n \nUNION PUBLIC SERVICE COMMISSION    ....Appellant  \nThrough:  Mr....",
+      "IN  THE  HIGH  COURT  OF  DELHI  AT  NEW  DELHI \nSUBJECT  : EXAMINATION MATTER \nDate of decision:   13th July, 2012 \nLPA No.229/2011 \n \nUNION PUBLIC SERVICE COMMISSION    ....Appellant  \nThrough:  Mr....",
+      "Landmark Cases of Supreme Court of India \n \n \n \nS. Case Title Case No. Date of Page No. \nNo.   Decision  \n1. Union of India & Anr. vs Civil Appeal 22.11.2005 4-10 \n Major Bahadur Singh No. 4482 of   \n..."
+    ],
+    "references": [
+      {
+        "document": "High Court Cases",
+        "content": "IN  THE  HIGH  COURT  OF  DELHI  AT  NEW  DELHI \nSUBJECT  : EXAMINATION MATTER \nDate of decision:   13th July, 2012 \nLPA No.229/2011 \n \nUNION PUBLIC SERVICE COMMISSION    ....Appellant  \nThrough:  Mr....",
+        "type": "retrieved"
+      },
+      {
+        "document": "Supreme Court Judgments",
+        "content": "Landmark Cases of Supreme Court of India \n \n \n \nS. Case Title Case No. Date of Page No. \nNo.   Decision  \n1. Union of India & Anr. vs Civil Appeal 22.11.2005 4-10 \n Major Bahadur Singh No. 4482 of   \n...",
+        "type": "retrieved"
+      }
+    ],
+    "case_name": "Union of India vs. Maj. Gen. Manomoy Ganguly"
+  },
+  {
+    "question": "What was the main issue in the case Union of India vs. Maj. Gen. Manomoy Ganguly?",
+    "ground_truth": "The main issue was Maj. Gen. Manomoy Ganguly's denial of promotion to the position of Director General Medical Services (Army) despite being eligible and senior.",
+    "generated_answer": "I can only assist with Indian legal topics. If you have questions related to Indian law, such as the Indian Constitution, IPC, CrPC, or relevant case law, feel free to ask!",
+    "contexts": [
+      "2062 SUPREME COURT REPORTS [2023] 16 S.C.R. 1\nIn the judgment of Sanjay Kishan Kaul, J.\nPrem Nath Kaul v. State of J&K [1969] Supp 2 SCR 270; \nState of West Bengal v. Union of India [1964] 1 SCR 371 \n...",
+      "2062 SUPREME COURT REPORTS [2023] 16 S.C.R. 1\nIn the judgment of Sanjay Kishan Kaul, J.\nPrem Nath Kaul v. State of J&K [1969] Supp 2 SCR 270; \nState of West Bengal v. Union of India [1964] 1 SCR 371 \n...",
+      "Landmark Cases of Supreme Court of India \n \n \n \nS. Case Title Case No. Date of Page No. \nNo.   Decision  \n1. Union of India & Anr. vs Civil Appeal 22.11.2005 4-10 \n Major Bahadur Singh No. 4482 of   \n..."
+    ],
+    "references": [
+      {
+        "document": "Legal Document",
+        "content": "2062 SUPREME COURT REPORTS [2023] 16 S.C.R. 1\nIn the judgment of Sanjay Kishan Kaul, J.\nPrem Nath Kaul v. State of J&K [1969] Supp 2 SCR 270; \nState of West Bengal v. Union of India [1964] 1 SCR 371 \n...",
+        "type": "retrieved"
+      },
+      {
+        "document": "Supreme Court Judgments",
+        "content": "Landmark Cases of Supreme Court of India \n \n \n \nS. Case Title Case No. Date of Page No. \nNo.   Decision  \n1. Union of India & Anr. vs Civil Appeal 22.11.2005 4-10 \n Major Bahadur Singh No. 4482 of   \n...",
+        "type": "retrieved"
+      }
+    ],
+    "case_name": "Union of India vs. Maj. Gen. Manomoy Ganguly"
+  },
+  {
+    "question": "What decision did the Armed Forces Tribunal (AFT) make regarding Maj. Gen. Manomoy Ganguly's promotion?",
+    "ground_truth": "The AFT directed the appellants to post Maj. Gen. Manomoy Ganguly as DGMS (Army) as expeditiously as possible and within one month from the date of the judgement.",
+    "generated_answer": "In the context provided, the Armed Forces Tribunal (AFT) dismissed the application regarding Maj. Gen. Manomoy Ganguly's promotion. The AFT determined that his case for promotion to the rank of Captain from Commander had been duly considered, and he was found unfit for empanelment. This conclusion was based on the merit list, where the last officer empaneled was ranked 26, while Maj. Gen. Ganguly stood at rank 52, indicating a significant gap. Consequently, the AFT rejected his contentions for promotion, compensation, and other inquiries, finding the application to be without merit and dismissing it in limine.",
+    "contexts": [
+      "2023/DHC/000278 \nW.P.(C) 5052/2022  Page 4 of 10 \n \nTherefore, if the merit lists are divulged after every \nPromotion Board (PB) or Selection Board (SB), the \nofficer who is amongst the last to make i...",
+      "2023/DHC/000278 \nW.P.(C) 5052/2022  Page 4 of 10 \n \nTherefore, if the merit lists are divulged after every \nPromotion Board (PB) or Selection Board (SB), the \nofficer who is amongst the last to make i...",
+      "fully satisfied that the case of the applicant for \npromotion to the  rank of Ca ptain from the ran k of \nCommander has been duly considered \ndispassionately and he has not  been fou nd to be fit \nfor..."
+    ],
+    "references": [
+      {
+        "document": "High Court Cases",
+        "content": "2023/DHC/000278 \nW.P.(C) 5052/2022  Page 4 of 10 \n \nTherefore, if the merit lists are divulged after every \nPromotion Board (PB) or Selection Board (SB), the \nofficer who is amongst the last to make i...",
+        "type": "retrieved"
+      },
+      {
+        "document": "High Court Cases",
+        "content": "fully satisfied that the case of the applicant for \npromotion to the  rank of Ca ptain from the ran k of \nCommander has been duly considered \ndispassionately and he has not  been fou nd to be fit \nfor...",
+        "type": "retrieved"
+      }
+    ],
+    "case_name": "Union of India vs. Maj. Gen. Manomoy Ganguly"
+  },
+  {
+    "question": "What was the reason given by the appellants for not promoting Maj. Gen. Manomoy Ganguly to DGMS (Army)?",
+    "ground_truth": "The appellants argued that Maj. Gen. Manomoy Ganguly was not found suitable for the position based on an inter se assessment of suitability among eligible officers.",
+    "generated_answer": "The appellants did not explicitly disclose the reasons for not promoting Maj. Gen. Manomoy Ganguly to the position of Director General of Medical Services (Army) in the provided context. However, it is highlighted that the merit lists, which are used in promotion decisions, are not divulged after Selection Boards or Promotion Boards. This policy is intended to prevent demotivation among officers who may feel discouraged if they know their ranking or likelihood of promotion. The emphasis is placed on maintaining the morale of the officers and encouraging them to continue performing to the best of their abilities.\n\nAdditionally, the context suggests that the information sought by the officer regarding the merit list and related details was not disclosed by the legal forums, which upheld that such information could not be shared in the interest of the Armed Forces. Therefore, while the specific reasons for denying the promotion to Maj. Gen. Ganguly are not stated, they are likely tied to the general practice of confidentiality regarding merit assessments and promotions within the military.",
+    "contexts": [
+      "2023/DHC/000278 \nW.P.(C) 5052/2022  Page 4 of 10 \n \nTherefore, if the merit lists are divulged after every \nPromotion Board (PB) or Selection Board (SB), the \nofficer who is amongst the last to make i...",
+      "2023/DHC/000278 \nW.P.(C) 5052/2022  Page 4 of 10 \n \nTherefore, if the merit lists are divulged after every \nPromotion Board (PB) or Selection Board (SB), the \nofficer who is amongst the last to make i...",
+      "elimination is followed in selection for promotion, and even a single entry \ncan destroy the career of an officer which has otherwise been outstanding \nthroughout. This often results in grave injustic..."
+    ],
+    "references": [
+      {
+        "document": "High Court Cases",
+        "content": "2023/DHC/000278 \nW.P.(C) 5052/2022  Page 4 of 10 \n \nTherefore, if the merit lists are divulged after every \nPromotion Board (PB) or Selection Board (SB), the \nofficer who is amongst the last to make i...",
+        "type": "retrieved"
+      },
+      {
+        "document": "Supreme Court Judgments",
+        "content": "elimination is followed in selection for promotion, and even a single entry \ncan destroy the career of an officer which has otherwise been outstanding \nthroughout. This often results in grave injustic...",
+        "type": "retrieved"
+      }
+    ],
+    "case_name": "Union of India vs. Maj. Gen. Manomoy Ganguly"
+  },
+  {
+    "question": "How did the Supreme Court of India rule on the appeal against the AFT's decision?",
+    "ground_truth": "The Supreme Court of India upheld the AFT's decision and dismissed the appeal, affirming that Maj. Gen. Manomoy Ganguly was entitled to the promotion as DGMS (Army).",
+    "generated_answer": "The provided context does not include any specific details regarding an appeal to the Supreme Court against a decision made by the Armed Forces Tribunal (AFT). However, based on my general knowledge, the Supreme Court may rule on appeals from the AFT typically concerning issues of law, jurisdiction, or factual findings, often emphasizing principles of justice and fairness.\n\nFor specific details on how the Supreme Court ruled on a particular appeal, including citation or case name, please provide more context or clarify which specific case you are referring to.",
+    "contexts": [
+      "REPORTABLE  \nIN THE SUPREME COURT OF INDIA  \nCIVIL APPELLATE JURISDICTION \n \n CIVIL APPEAL NO. 9095 OF 2012 \n (Arising out of SLP(C) No.7529 of 2009)  \nManohar s/o Manikrao Anchule ... Appellant \n Ver...",
+      "REPORTABLE  \nIN THE SUPREME COURT OF INDIA  \nCIVIL APPELLATE JURISDICTION \n \n CIVIL APPEAL NO. 9095 OF 2012 \n (Arising out of SLP(C) No.7529 of 2009)  \nManohar s/o Manikrao Anchule ... Appellant \n Ver...",
+      "THE CONSTITUTION OF  INDIA \n(Part V.—The Union) \n62\nappeal to the Supreme Court on the ground that any such question as aforesaid has been wrongly decided 1***. \nExplanation.—For the purposes of this ..."
+    ],
+    "references": [
+      {
+        "document": "Supreme Court Judgments",
+        "content": "REPORTABLE  \nIN THE SUPREME COURT OF INDIA  \nCIVIL APPELLATE JURISDICTION \n \n CIVIL APPEAL NO. 9095 OF 2012 \n (Arising out of SLP(C) No.7529 of 2009)  \nManohar s/o Manikrao Anchule ... Appellant \n Ver...",
+        "type": "retrieved"
+      },
+      {
+        "document": "Constitution of India",
+        "content": "THE CONSTITUTION OF  INDIA \n(Part V.—The Union) \n62\nappeal to the Supreme Court on the ground that any such question as aforesaid has been wrongly decided 1***. \nExplanation.—For the purposes of this ...",
+        "type": "retrieved"
+      }
+    ],
+    "case_name": "Union of India vs. Maj. Gen. Manomoy Ganguly"
+  }
+]

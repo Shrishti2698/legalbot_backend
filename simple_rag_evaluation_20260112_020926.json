@@ -1,0 +1,77 @@
+{
+  "evaluation_date": "2026-01-12T02:09:26.305265",
+  "total_questions": 5,
+  "average_scores": {
+    "relevancy": 3.0,
+    "accuracy": 2.2,
+    "completeness": 2.6
+  },
+  "overall_score": 2.6,
+  "detailed_results": [
+    {
+      "question": "Who is the respondent in the case Union of India vs. Maj. Gen. Manomoy Ganguly?",
+      "ground_truth": "The respondent is Maj. Gen. Manomoy Ganguly.",
+      "generated_answer": "I can only assist with Indian legal topics. If you have any questions related to Indian law, legal matters, or specific provisions, feel free to ask!",
+      "case_name": "Union of India vs. Maj. Gen. Manomoy Ganguly",
+      "scores": {
+        "relevancy": 2,
+        "accuracy": 1,
+        "completeness": 1
+      },
+      "references_count": 0,
+      "evaluation": "Relevancy: 2/10  \nAccuracy: 1/10  \nCompleteness: 1/10  \n\nBrief explanation: The generated answer does not directly address the question about the respondent in the case Union of India vs. Maj. Gen. Manomoy Ganguly. Instead, it provides a general statement about Indian legal topics, which is not relevant to identifying the respondent. The accuracy is low because it fails to provide the correct information regarding the respondent, and it is incomplete as it does not answer the question at all."
+    },
+    {
+      "question": "What was the main issue in the case Union of India vs. Maj. Gen. Manomoy Ganguly?",
+      "ground_truth": "The main issue was Maj. Gen. Manomoy Ganguly's denial of promotion to the position of Director General Medical Services (Army) despite being eligible and senior.",
+      "generated_answer": "I can only assist with Indian legal topics. If you have a specific question related to Indian law, please let me know, and I'll be happy to help!",
+      "case_name": "Union of India vs. Maj. Gen. Manomoy Ganguly",
+      "scores": {
+        "relevancy": 1,
+        "accuracy": 1,
+        "completeness": 1
+      },
+      "references_count": 0,
+      "evaluation": "Relevancy: 1/10  \nAccuracy: 1/10  \nCompleteness: 1/10  \n\nBrief explanation: The generated answer does not address the question at all. It fails to provide any information about the case Union of India vs. Maj. Gen. Manomoy Ganguly, instead redirecting the user to ask a specific question about Indian law. Therefore, it is completely irrelevant, factually incorrect, and lacks any completeness regarding the main issue of the case."
+    },
+    {
+      "question": "What decision did the Armed Forces Tribunal (AFT) make regarding Maj. Gen. Manomoy Ganguly's promotion?",
+      "ground_truth": "The AFT directed the appellants to post Maj. Gen. Manomoy Ganguly as DGMS (Army) as expeditiously as possible and within one month from the date of the judgement.",
+      "generated_answer": "The Armed Forces Tribunal (AFT) dismissed the application of Maj. Gen. Manomoy Ganguly regarding his promotion. The AFT found that his case for promotion to the rank of Captain from the rank of Commander had been duly considered and that he was not found fit for empanelment. The AFT noted that the merit of the last officer who had been empaneled was significantly higher than that of Ganguly, who stood at a much lower position on the merit list. Consequently, all of his prayers, including requests for compensation and further inquiries, were rejected, and the Tribunal deemed his application to be without merit.",
+      "case_name": "Union of India vs. Maj. Gen. Manomoy Ganguly",
+      "scores": {
+        "relevancy": 2,
+        "accuracy": 2,
+        "completeness": 3
+      },
+      "references_count": 2,
+      "evaluation": "Relevancy: 2/10  \nAccuracy: 2/10  \nCompleteness: 3/10  \n\nBrief explanation: The generated answer is not relevant to the question asked, which specifically inquires about the AFT's decision regarding Maj. Gen. Manomoy Ganguly's promotion. Instead, it discusses a dismissal of an application related to a different rank and context. The accuracy is low because it contradicts the ground truth, which states that the AFT directed his posting as DGMS (Army), rather than dismissing his application. The completeness is slightly better, as it provides some context about the AFT's considerations, but it ultimately fails to address the core of the question, leading to a low score overall."
+    },
+    {
+      "question": "What was the reason given by the appellants for not promoting Maj. Gen. Manomoy Ganguly to DGMS (Army)?",
+      "ground_truth": "The appellants argued that Maj. Gen. Manomoy Ganguly was not found suitable for the position based on an inter se assessment of suitability among eligible officers.",
+      "generated_answer": "The reason given by the appellants for not promoting Maj. Gen. Manomoy Ganguly to the position of DGMS (Army) was related to the non-communication of the 'good' entry for the year 1993-94 to the appellant. They argued that the lack of this information led to the exclusion of his merits from consideration for promotion. Furthermore, it was emphasized that the elimination process followed in selection for promotion could cause significant career damage to an officer who otherwise had an outstanding track record, leading to potential injustice and demoralization among officers who are superseded despite being meritorious. \n\nThis reasoning reflects concerns about the transparency and fairness of the promotion process within the Armed Forces, specifically regarding how merit lists and entries are communicated to officers.",
+      "case_name": "Union of India vs. Maj. Gen. Manomoy Ganguly",
+      "scores": {
+        "relevancy": 7,
+        "accuracy": 5,
+        "completeness": 6
+      },
+      "references_count": 2,
+      "evaluation": "Relevancy: 7/10  \nAccuracy: 5/10  \nCompleteness: 6/10  \n\nBrief explanation: The generated answer is somewhat relevant as it discusses the reasons for not promoting Maj. Gen. Manomoy Ganguly, but it diverges from the specific ground truth by focusing on the non-communication of a 'good' entry rather than the inter se assessment of suitability among eligible officers. The accuracy is lower because it does not accurately reflect the reason given by the appellants as stated in the ground truth. The completeness is moderate; while it provides additional context about the promotion process and its implications, it does not fully address the core reason for the decision as outlined in the ground truth."
+    },
+    {
+      "question": "How did the Supreme Court of India rule on the appeal against the AFT's decision?",
+      "ground_truth": "The Supreme Court of India upheld the AFT's decision and dismissed the appeal, affirming that Maj. Gen. Manomoy Ganguly was entitled to the promotion as DGMS (Army).",
+      "generated_answer": "I can only provide information related to Indian legal matters. The Supreme Court judgment mentioned in your context pertains to a civil appeal where the appellant challenged a decision under the Right to Information Act, 2005, not specifically about the Armed Forces Tribunal (AFT). \n\nIf you have a particular case or context related to the AFT's decision that you’d like to discuss, please provide more details, and I'll do my best to assist you.",
+      "case_name": "Union of India vs. Maj. Gen. Manomoy Ganguly",
+      "scores": {
+        "relevancy": 3,
+        "accuracy": 2,
+        "completeness": 2
+      },
+      "references_count": 2,
+      "evaluation": "Relevancy: 3/10  \nAccuracy: 2/10  \nCompleteness: 2/10  \n\nBrief explanation: The generated answer is only partially relevant to the question, as it does not address the specific ruling of the Supreme Court regarding the AFT's decision. Instead, it diverts to a different legal context related to the Right to Information Act, which is not pertinent to the question asked. The accuracy is low because it fails to reflect the actual ruling of the Supreme Court, which upheld the AFT's decision. Completeness is also low, as the answer does not provide any information about the case or the ruling itself, leaving the question unanswered."
+    }
+  ]
+}

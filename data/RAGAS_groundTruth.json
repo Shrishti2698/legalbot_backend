@@ -1,0 +1,126 @@
+[
+  {
+    "question": "What is the supreme law of India?",
+    "answer": "The Constitution of India (Article 13)."
+  },
+  {
+    "question": "Which article guarantees equality before law?",
+    "answer": "Article 14 of the Constitution of India."
+  },
+  {
+    "question": "Which article protects life and personal liberty?",
+    "answer": "Article 21 of the Constitution of India."
+  },
+  {
+    "question": "Which article provides protection against arbitrary arrest?",
+    "answer": "Article 22(1) of the Constitution of India."
+  },
+  {
+    "question": "Is free legal aid a constitutional obligation of the State?",
+    "answer": "Yes, under Article 39A of the Constitution of India."
+  },
+  {
+    "question": "Which article makes education a fundamental right?",
+    "answer": "Article 21A of the Constitution of India."
+  },
+  {
+    "question": "Who appoints judges of the Supreme Court of India?",
+    "answer": "The President of India under Article 124(2)."
+  },
+  {
+    "question": "Which section of IPC defines murder?",
+    "answer": "Section 300 of the Indian Penal Code."
+  },
+  {
+    "question": "What is the punishment for murder under IPC?",
+    "answer": "Death or life imprisonment under Section 302 IPC."
+  },
+  {
+    "question": "Which section of IPC defines culpable homicide?",
+    "answer": "Section 299 of the Indian Penal Code."
+  },
+  {
+    "question": "Which section of IPC deals with attempt to murder?",
+    "answer": "Section 307 of the Indian Penal Code."
+  },
+  {
+    "question": "Which section of IPC deals with theft?",
+    "answer": "Section 378 of the Indian Penal Code."
+  },
+  {
+    "question": "Which section of IPC punishes criminal intimidation?",
+    "answer": "Section 503 of the Indian Penal Code."
+  },
+  {
+    "question": "Which section of IPC deals with abetment of suicide?",
+    "answer": "Section 306 of the Indian Penal Code."
+  },
+  {
+    "question": "Which section of IPC criminalizes attempt to suicide?",
+    "answer": "Section 309 of the Indian Penal Code (subject to Mental Healthcare Act, 2017)."
+  },
+  {
+    "question": "Which law replaced the Indian Penal Code?",
+    "answer": "The Bharatiya Nyaya Sanhita, 2023."
+  },
+  {
+    "question": "Which section of BNS defines murder?",
+    "answer": "Section 101 of the Bharatiya Nyaya Sanhita."
+  },
+  {
+    "question": "What is the punishment for murder under BNS?",
+    "answer": "Death or life imprisonment under Section 103 of the Bharatiya Nyaya Sanhita."
+  },
+  {
+    "question": "Does BNS criminalize mob lynching?",
+    "answer": "Yes, under Section 103(2) of the Bharatiya Nyaya Sanhita."
+  },
+  {
+    "question": "Which section of BNS deals with organized crime?",
+    "answer": "Section 109 of the Bharatiya Nyaya Sanhita."
+  },
+  {
+    "question": "Is terrorism covered under BNS?",
+    "answer": "Yes, under Section 113 of the Bharatiya Nyaya Sanhita."
+  },
+  {
+    "question": "Is attempt to suicide an offence under BNS?",
+    "answer": "No, except when done to threaten or coerce, under Section 226 BNS."
+  },
+  {
+    "question": "Which section of BNS explicitly defines snatching?",
+    "answer": "Section 304 of the Bharatiya Nyaya Sanhita."
+  },
+  {
+    "question": "Which section of BNS criminalizes sexual intercourse by deceit?",
+    "answer": "Section 69 of the Bharatiya Nyaya Sanhita."
+  },
+  {
+    "question": "Which section of CrPC defines First Information Report (FIR)?",
+    "answer": "Section 154 of the Code of Criminal Procedure."
+  },
+  {
+    "question": "Can police arrest without warrant under CrPC?",
+    "answer": "Yes, in cognizable offences under Section 41 CrPC."
+  },
+  {
+    "question": "Which section of CrPC mandates medical examination of arrested persons?",
+    "answer": "Section 54 of the Code of Criminal Procedure."
+  },
+  {
+    "question": "What is the maximum period of police custody allowed under CrPC?",
+    "answer": "15 days under Section 167 CrPC."
+  },
+  {
+    "question": "Which section of CrPC provides for anticipatory bail?",
+    "answer": "Section 438 of the Code of Criminal Procedure."
+  },
+  {
+    "question": "Are women generally prohibited from being arrested at night?",
+    "answer": "Yes, under Section 46(4) of the Code of Criminal Procedure."
+  },
+  {
+    "question": "Which section empowers a Magistrate to take cognizance of offences?",
+    "answer": "Section 190 of the Code of Criminal Procedure."
+  }
+]
