@@ -5,8 +5,7 @@ from typing import List
 import sys
 import os
 
-# Add parent directory to path to import utils
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# Import utils from same directory
 from utils import load_vector_store, create_enhanced_rag_response
 from admin_routes import router as admin_router
 from auth_routes import router as auth_router
