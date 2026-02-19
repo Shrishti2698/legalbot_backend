@@ -14,17 +14,6 @@ from langchain_chroma import Chroma
 
 router = APIRouter(prefix="", tags=["admin"])
 
-# Startup event to preload embeddings
-@router.on_event("startup")
-async def load_embeddings_on_startup():
-    """Preload embeddings model at startup"""
-    try:
-        print("🔄 Preloading embeddings model...")
-        get_embeddings()
-        print("✅ Embeddings model loaded")
-    except Exception as e:
-        print(f"⚠️  Warning: Could not preload embeddings: {e}")
-
 # Constants
 DATA_DIR = "data"
 CHROMA_DIR = "chroma_db"

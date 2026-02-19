@@ -53,11 +53,9 @@ async def startup_event():
     try:
         # Change to parent directory to access chroma_db
         os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-        vector_store = load_vector_store()
-        retriever = vector_store.as_retriever(search_kwargs={"k": 5})
-        print("✅ Vector store loaded successfully")
+        print("✅ API started. Vector store will load on first request to save memory.")
     except Exception as e:
-        print(f"❌ Error loading vector store: {e}")
+        print(f"❌ Error during startup: {e}")
         print(f"Current directory: {os.getcwd()}")
 
 @app.get("/")
@@ -71,8 +69,16 @@ async def chat_options():
 @app.post("/chat")
 async def chat_endpoint(request: ChatRequest):
     """Main chat endpoint - This is where frontend calls the API"""
+    global retriever
+    
+    # Lazy load retriever on first request
     if retriever is None:
-        raise HTTPException(status_code=503, detail="Vector store not available")
+        try:
+            vector_store = load_vector_store()
+            retriever = vector_store.as_retriever(search_kwargs={"k": 5})
+            print("✅ Vector store loaded on first request")
+        except Exception as e:
+            raise HTTPException(status_code=503, detail=f"Vector store not available: {str(e)}")
     
     try:
         # Format chat history
