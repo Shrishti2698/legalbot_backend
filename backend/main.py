@@ -16,20 +16,13 @@ app = FastAPI(title="Indian Legal Assistant API")
 app.include_router(auth_router)
 app.include_router(admin_router)
 
-# Enable CORS for frontend
+# Enable CORS - Allow all origins
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "http://localhost:5174",
-        "https://legalbot-admin-frontend.vercel.app",
-        "https://*.vercel.app",
-        "*"  # Allow all for now
-    ],
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
-    expose_headers=["*"],
 )
 
 # Request/Response Models (JSON Structure)
