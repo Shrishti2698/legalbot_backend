@@ -9,8 +9,9 @@ import uuid
 
 from pypdf import PdfReader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_openai import OpenAIEmbeddings
 from langchain_chroma import Chroma
+import os
 
 router = APIRouter(prefix="", tags=["admin"])
 
@@ -28,9 +29,8 @@ config = {
         "separator": "\n\n"
     },
     "embedding": {
-        "model_name": "sentence-transformers/all-MiniLM-L6-v2",
-        "device": "cpu",
-        "normalize_embeddings": True
+        "model_name": "text-embedding-3-small",
+        "dimensions": 1536
     },
     "retrieval": {
         "k": 5,
@@ -89,10 +89,8 @@ def get_embeddings():
     """Get cached embeddings model"""
     global _embeddings_model
     if _embeddings_model is None:
-        _embeddings_model = HuggingFaceEmbeddings(
-            model_name=config["embedding"]["model_name"],
-            model_kwargs={'device': config["embedding"]["device"]},
-            encode_kwargs={'normalize_embeddings': config["embedding"]["normalize_embeddings"]}
+        _embeddings_model = OpenAIEmbeddings(
+            model=config["embedding"]["model_name"]
         )
     return _embeddings_model
 

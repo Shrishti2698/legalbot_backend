@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_openai import OpenAIEmbeddings
 from langchain_chroma import Chroma
 from langchain_openai import ChatOpenAI
 from langchain.chains.retrieval import create_retrieval_chain
@@ -31,16 +31,10 @@ load_dotenv()
 CHROMA_DIR = "chroma_db"
 
 def get_embeddings_model():
-    """Initialize and return the HuggingFace embeddings model"""
-    model_name = "sentence-transformers/all-MiniLM-L6-v2"
-    
-    # Initialize the embeddings model
-    embeddings = HuggingFaceEmbeddings(
-        model_name=model_name,
-        model_kwargs={'device': 'cpu'},
-        encode_kwargs={'normalize_embeddings': True}
+    """Initialize and return the OpenAI embeddings model"""
+    embeddings = OpenAIEmbeddings(
+        model="text-embedding-3-small"
     )
-    
     return embeddings
 
 def load_vector_store():
