@@ -16,8 +16,8 @@ langchain-chroma==0.1.4
 langchain-core==0.3.17
 langchain-text-splitters==0.3.2
 
-# Vector Store
-chromadb==0.5.20
+# Vector Store (downgrade for compatibility)
+chromadb==0.4.24
 
 # OpenAI
 openai==1.54.4
