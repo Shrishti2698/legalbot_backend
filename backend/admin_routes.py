@@ -141,56 +141,69 @@ async def upload_document(
     chunk_overlap: Optional[int] = Form(DEFAULT_CHUNK_OVERLAP)
 ):
     """Upload and process PDF document"""
-    if not file.filename.endswith('.pdf'):
-        raise HTTPException(400, "Only PDF files allowed")
-    
-    start_time = datetime.now()
-    
-    # Save file
-    folder = get_document_folder(document_type)
-    save_dir = os.path.join(DATA_DIR, folder) if folder else DATA_DIR
-    os.makedirs(save_dir, exist_ok=True)
-    
-    file_path = os.path.join(save_dir, file.filename)
-    with open(file_path, "wb") as f:
-        content = await file.read()
-        f.write(content)
-    
-    # Extract text
-    text, pages = extract_text_from_pdf(file_path)
-    
-    # Chunk text
-    chunks = chunk_text(text, chunk_size, chunk_overlap)
-    
-    # Generate embeddings and store
-    embeddings = get_embeddings()
-    vector_store = Chroma(persist_directory=CHROMA_DIR, embedding_function=embeddings)
-    
-    metadatas = [{"source": file_path, "page": i} for i in range(len(chunks))]
-    vector_store.add_texts(chunks, metadatas=metadatas)
-    
-    processing_time = (datetime.now() - start_time).total_seconds()
-    
-    return {
-        "status": "success",
-        "message": "Document processed and added to vector store",
-        "filename": file.filename,
-        "saved_path": file_path,
-        "processing_stats": {
-            "pages_extracted": pages,
-            "total_characters": len(text),
-            "chunks_created": len(chunks),
-            "embeddings_generated": len(chunks),
-            "vectors_added_to_chromadb": len(chunks),
-            "embedding_dimension": 384
-        },
-        "chunk_config_used": {
-            "chunk_size": chunk_size,
-            "chunk_overlap": chunk_overlap,
-            "separator": "\n\n"
-        },
-        "processing_time_seconds": round(processing_time, 2)
-    }
+    try:
+        if not file.filename.endswith('.pdf'):
+            raise HTTPException(400, "Only PDF files allowed")
+        
+        print(f"📤 Starting upload: {file.filename}")
+        start_time = datetime.now()
+        
+        # Save file
+        folder = get_document_folder(document_type)
+        save_dir = os.path.join(DATA_DIR, folder) if folder else DATA_DIR
+        os.makedirs(save_dir, exist_ok=True)
+        
+        file_path = os.path.join(save_dir, file.filename)
+        with open(file_path, "wb") as f:
+            content = await file.read()
+            f.write(content)
+        
+        print(f"💾 File saved: {file_path}")
+        
+        # Extract text
+        text, pages = extract_text_from_pdf(file_path)
+        print(f"📄 Extracted {pages} pages, {len(text)} characters")
+        
+        # Chunk text
+        chunks = chunk_text(text, chunk_size, chunk_overlap)
+        print(f"✂️ Created {len(chunks)} chunks")
+        
+        # Generate embeddings and store
+        print(f"🔄 Generating embeddings...")
+        embeddings = get_embeddings()
+        vector_store = Chroma(persist_directory=CHROMA_DIR, embedding_function=embeddings)
+        
+        metadatas = [{"source": file_path, "page": i} for i in range(len(chunks))]
+        vector_store.add_texts(chunks, metadatas=metadatas)
+        
+        processing_time = (datetime.now() - start_time).total_seconds()
+        print(f"✅ Upload complete in {processing_time}s")
+        
+        return {
+            "status": "success",
+            "message": "Document processed and added to vector store",
+            "filename": file.filename,
+            "saved_path": file_path,
+            "processing_stats": {
+                "pages_extracted": pages,
+                "total_characters": len(text),
+                "chunks_created": len(chunks),
+                "embeddings_generated": len(chunks),
+                "vectors_added_to_chromadb": len(chunks),
+                "embedding_dimension": 384
+            },
+            "chunk_config_used": {
+                "chunk_size": chunk_size,
+                "chunk_overlap": chunk_overlap,
+                "separator": "\n\n"
+            },
+            "processing_time_seconds": round(processing_time, 2)
+        }
+    except Exception as e:
+        print(f"❌ Upload failed: {str(e)}")
+        import traceback
+        traceback.print_exc()
+        raise HTTPException(500, f"Upload failed: {str(e)}")
 
 @router.get("/documents")
 async def list_documents(folder: Optional[str] = None):
