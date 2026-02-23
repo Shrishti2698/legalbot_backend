@@ -19,10 +19,17 @@ app.include_router(admin_router)
 # Enable CORS for frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allow all origins for development
+    allow_origins=[
+        "http://localhost:5173",
+        "http://localhost:5174",
+        "https://legalbot-admin-frontend.vercel.app",
+        "https://*.vercel.app",
+        "*"  # Allow all for now
+    ],
     allow_credentials=True,
-    allow_methods=["*"],  # Allow all HTTP methods
+    allow_methods=["*"],
     allow_headers=["*"],
+    expose_headers=["*"],
 )
 
 # Request/Response Models (JSON Structure)
