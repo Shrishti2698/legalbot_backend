@@ -169,7 +169,24 @@ async def upload_document(
         # Generate embeddings and store
         print(f"🔄 Generating embeddings...")
         embeddings = get_embeddings()
-        vector_store = Chroma(persist_directory=CHROMA_DIR, embedding_function=embeddings)
+        
+        # Create new vector store instance for this upload
+        try:
+            vector_store = Chroma(
+                persist_directory=CHROMA_DIR, 
+                embedding_function=embeddings
+            )
+        except Exception as e:
+            print(f"⚠️ ChromaDB error, recreating: {str(e)}")
+            # If there's an error, try to recreate the collection
+            import shutil
+            if os.path.exists(CHROMA_DIR):
+                shutil.rmtree(CHROMA_DIR)
+            os.makedirs(CHROMA_DIR, exist_ok=True)
+            vector_store = Chroma(
+                persist_directory=CHROMA_DIR, 
+                embedding_function=embeddings
+            )
         
         metadatas = [{"source": file_path, "page": i} for i in range(len(chunks))]
         vector_store.add_texts(chunks, metadatas=metadatas)
