@@ -41,15 +41,28 @@ def load_vector_store():
     """Load the existing vector store"""
     embeddings = get_embeddings_model()
     
+    # Create directory if it doesn't exist
     if not os.path.exists(CHROMA_DIR):
-        raise ValueError(f"Vector store directory {CHROMA_DIR} does not exist. Please run ingest.py first.")
+        os.makedirs(CHROMA_DIR, exist_ok=True)
     
-    vector_store = Chroma(
-        persist_directory=CHROMA_DIR,
-        embedding_function=embeddings
-    )
-    
-    return vector_store
+    try:
+        vector_store = Chroma(
+            persist_directory=CHROMA_DIR,
+            embedding_function=embeddings
+        )
+        return vector_store
+    except Exception as e:
+        print(f"Error loading vector store: {e}")
+        # Recreate if incompatible
+        import shutil
+        if os.path.exists(CHROMA_DIR):
+            shutil.rmtree(CHROMA_DIR)
+        os.makedirs(CHROMA_DIR, exist_ok=True)
+        vector_store = Chroma(
+            persist_directory=CHROMA_DIR,
+            embedding_function=embeddings
+        )
+        return vector_store
 
 def extract_document_name(source_path):
     """Extract document name from file path"""

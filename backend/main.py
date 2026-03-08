@@ -60,7 +60,23 @@ async def startup_event():
 
 @app.get("/")
 async def root():
-    return {"message": "Indian Legal Assistant API is running"}
+    return {"message": "Indian Legal Assistant API is running", "embeddings": "OpenAI"}
+
+@app.get("/reset-db")
+async def reset_database():
+    """Reset ChromaDB - use this after switching embedding models"""
+    import shutil
+    try:
+        chroma_path = "chroma_db"
+        if os.path.exists(chroma_path):
+            shutil.rmtree(chroma_path)
+            os.makedirs(chroma_path, exist_ok=True)
+            return {"message": "ChromaDB reset successfully. You can now upload documents."}
+        else:
+            os.makedirs(chroma_path, exist_ok=True)
+            return {"message": "ChromaDB directory created."}
+    except Exception as e:
+        return {"error": str(e)}
 
 @app.options("/chat")  # Purpose: Handle browser's CORS preflight check. Browser asks "Can I POST to /chat?" → Server says "OK"
 async def chat_options():
