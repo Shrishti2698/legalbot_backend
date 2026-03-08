@@ -8,16 +8,16 @@ pyjwt==2.9.0
 # PDF Processing
 pypdf==5.1.0
 
-# LangChain - compatible versions
-langchain==0.3.7
-langchain-community==0.3.7
-langchain-openai==0.2.8
+# LangChain - latest compatible versions
+langchain==0.3.13
+langchain-community==0.3.13
+langchain-openai==0.2.14
 langchain-chroma==0.1.4
-langchain-core==0.3.17
-langchain-text-splitters==0.3.2
+langchain-core==0.3.28
+langchain-text-splitters==0.3.4
 
-# Vector Store - older stable version
-chromadb==0.4.15
+# Vector Store - latest version
+chromadb==0.5.23
 
 # OpenAI
-openai==1.54.4
+openai==1.59.5
