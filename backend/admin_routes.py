@@ -189,7 +189,20 @@ async def upload_document(
             )
         
         metadatas = [{"source": file_path, "page": i} for i in range(len(chunks))]
-        vector_store.add_texts(chunks, metadatas=metadatas)
+        
+        # Process in batches to avoid token limits (max 300k tokens per request)
+        batch_size = 100  # Process 100 chunks at a time
+        total_batches = (len(chunks) + batch_size - 1) // batch_size
+        
+        print(f"📦 Processing {len(chunks)} chunks in {total_batches} batches...")
+        
+        for i in range(0, len(chunks), batch_size):
+            batch_chunks = chunks[i:i + batch_size]
+            batch_metadatas = metadatas[i:i + batch_size]
+            batch_num = (i // batch_size) + 1
+            
+            print(f"  Batch {batch_num}/{total_batches}: {len(batch_chunks)} chunks")
+            vector_store.add_texts(batch_chunks, metadatas=batch_metadatas)
         
         processing_time = (datetime.now() - start_time).total_seconds()
         print(f"✅ Upload complete in {processing_time}s")
