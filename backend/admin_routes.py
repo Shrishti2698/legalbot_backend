@@ -208,9 +208,17 @@ async def upload_document(
         print(f"✅ Upload complete in {processing_time}s")
         
         # Sync to Supabase after successful upload
-        print(f"☁️ Syncing to Supabase...")
-        from supabase_storage import sync_chroma_to_supabase
-        sync_chroma_to_supabase()
+        try:
+            print(f"☁️ Syncing to Supabase...")
+            import sys
+            backend_path = os.path.dirname(os.path.abspath(__file__))
+            if backend_path not in sys.path:
+                sys.path.insert(0, backend_path)
+            
+            from supabase_storage import sync_chroma_to_supabase
+            sync_chroma_to_supabase()
+        except Exception as e:
+            print(f"⚠️ Supabase sync failed: {e}")
         
         return {
             "status": "success",

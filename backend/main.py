@@ -51,16 +51,25 @@ async def startup_event():
     """Load vector store on startup"""
     global retriever
     try:
-        # Change to parent directory to access chroma_db
-        os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+        # Import supabase_storage from backend directory
+        import sys
+        backend_path = os.path.join(os.path.dirname(os.path.abspath(__file__)))
+        if backend_path not in sys.path:
+            sys.path.insert(0, backend_path)
+        
+        from supabase_storage import restore_chroma_from_supabase
+        
+        # Change to backend directory
+        os.chdir(backend_path)
         
         # Restore ChromaDB from Supabase if not exists
-        from supabase_storage import restore_chroma_from_supabase
         restore_chroma_from_supabase()
         
         print("✅ API started. Vector store will load on first request to save memory.")
     except Exception as e:
         print(f"❌ Error during startup: {e}")
+        import traceback
+        traceback.print_exc()
         print(f"Current directory: {os.getcwd()}")
 
 @app.get("/")
@@ -70,12 +79,20 @@ async def root():
 @app.get("/sync-db")
 async def sync_database():
     """Manually sync ChromaDB to Supabase"""
-    from supabase_storage import sync_chroma_to_supabase
-    success = sync_chroma_to_supabase()
-    if success:
-        return {"message": "ChromaDB synced to Supabase successfully"}
-    else:
-        return {"error": "Failed to sync ChromaDB to Supabase"}
+    try:
+        import sys
+        backend_path = os.path.join(os.path.dirname(os.path.abspath(__file__)))
+        if backend_path not in sys.path:
+            sys.path.insert(0, backend_path)
+        
+        from supabase_storage import sync_chroma_to_supabase
+        success = sync_chroma_to_supabase()
+        if success:
+            return {"message": "ChromaDB synced to Supabase successfully"}
+        else:
+            return {"error": "Failed to sync ChromaDB to Supabase"}
+    except Exception as e:
+        return {"error": str(e)}
 
 @app.options("/chat")  # Purpose: Handle browser's CORS preflight check. Browser asks "Can I POST to /chat?" → Server says "OK"
 async def chat_options():
