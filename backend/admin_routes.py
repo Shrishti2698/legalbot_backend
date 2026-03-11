@@ -231,7 +231,7 @@ async def upload_document(
                 "chunks_created": len(chunks),
                 "embeddings_generated": len(chunks),
                 "vectors_added_to_chromadb": len(chunks),
-                "embedding_dimension": 384
+                "embedding_dimension": 1536
             },
             "chunk_config_used": {
                 "chunk_size": chunk_size,
@@ -433,7 +433,7 @@ async def get_embedding_config():
         "status": "success",
         "embedding_config": {
             **config["embedding"],
-            "embedding_dimension": 384,
+            "embedding_dimension": 1536,
             "max_sequence_length": 256
         },
         "alternative_models": [
@@ -509,7 +509,7 @@ async def get_vectorstore_stats():
                 "collection_name": "default",
                 "total_chunks": total_chunks,
                 "total_documents": unique_docs,
-                "embedding_dimension": 384,
+                "embedding_dimension": 1536,
                 "chroma_db_size_mb": round(chroma_size / (1024*1024), 2),
                 "chroma_db_path": CHROMA_DIR,
                 "last_updated": datetime.now().isoformat() + "Z"
