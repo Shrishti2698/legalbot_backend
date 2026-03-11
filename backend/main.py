@@ -53,6 +53,11 @@ async def startup_event():
     try:
         # Change to parent directory to access chroma_db
         os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+        
+        # Restore ChromaDB from Supabase if not exists
+        from supabase_storage import restore_chroma_from_supabase
+        restore_chroma_from_supabase()
+        
         print("✅ API started. Vector store will load on first request to save memory.")
     except Exception as e:
         print(f"❌ Error during startup: {e}")
@@ -62,21 +67,15 @@ async def startup_event():
 async def root():
     return {"message": "Indian Legal Assistant API is running", "embeddings": "OpenAI"}
 
-@app.get("/reset-db")
-async def reset_database():
-    """Reset ChromaDB - use this after switching embedding models"""
-    import shutil
-    try:
-        chroma_path = "chroma_db"
-        if os.path.exists(chroma_path):
-            shutil.rmtree(chroma_path)
-            os.makedirs(chroma_path, exist_ok=True)
-            return {"message": "ChromaDB reset successfully. You can now upload documents."}
-        else:
-            os.makedirs(chroma_path, exist_ok=True)
-            return {"message": "ChromaDB directory created."}
-    except Exception as e:
-        return {"error": str(e)}
+@app.get("/sync-db")
+async def sync_database():
+    """Manually sync ChromaDB to Supabase"""
+    from supabase_storage import sync_chroma_to_supabase
+    success = sync_chroma_to_supabase()
+    if success:
+        return {"message": "ChromaDB synced to Supabase successfully"}
+    else:
+        return {"error": "Failed to sync ChromaDB to Supabase"}
 
 @app.options("/chat")  # Purpose: Handle browser's CORS preflight check. Browser asks "Can I POST to /chat?" → Server says "OK"
 async def chat_options():

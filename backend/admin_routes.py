@@ -207,6 +207,11 @@ async def upload_document(
         processing_time = (datetime.now() - start_time).total_seconds()
         print(f"✅ Upload complete in {processing_time}s")
         
+        # Sync to Supabase after successful upload
+        print(f"☁️ Syncing to Supabase...")
+        from supabase_storage import sync_chroma_to_supabase
+        sync_chroma_to_supabase()
+        
         return {
             "status": "success",
             "message": "Document processed and added to vector store",
