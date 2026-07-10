@@ -76,6 +76,35 @@ async def startup_event():
 async def root():
     return {"message": "Indian Legal Assistant API is running", "embeddings": "OpenAI"}
 
+@app.get("/reset-db")
+async def reset_database():
+    """Reset ChromaDB - use this after switching embedding models"""
+    import shutil
+    try:
+        chroma_path = "chroma_db"
+        if os.path.exists(chroma_path):
+            shutil.rmtree(chroma_path)
+            os.makedirs(chroma_path, exist_ok=True)
+            
+            # Also delete from Supabase
+            try:
+                import sys
+                backend_path = os.path.join(os.path.dirname(os.path.abspath(__file__)))
+                if backend_path not in sys.path:
+                    sys.path.insert(0, backend_path)
+                
+                from supabase_storage import supabase, BUCKET_NAME, CHROMA_ZIP
+                supabase.storage.from_(BUCKET_NAME).remove([CHROMA_ZIP])
+            except:
+                pass
+            
+            return {"message": "ChromaDB reset successfully. You can now upload documents with new embeddings."}
+        else:
+            os.makedirs(chroma_path, exist_ok=True)
+            return {"message": "ChromaDB directory created."}
+    except Exception as e:
+        return {"error": str(e)}
+
 @app.get("/sync-db")
 async def sync_database():
     """Manually sync ChromaDB to Supabase"""

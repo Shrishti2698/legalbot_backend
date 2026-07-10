@@ -477,12 +477,12 @@ async def get_vectorstore_stats():
         except:
             pass
         
-        # Count unique documents from collection metadata (faster)
+        # Count unique documents from collection metadata (get ALL, not just 1000)
         unique_docs = 0
         doc_types = {}
         try:
-            # Only get metadata, not full documents
-            all_data = vector_store._collection.get(limit=1000)  # Limit to first 1000 for speed
+            # Get ALL metadata to properly categorize all documents
+            all_data = vector_store._collection.get()  # Get everything, no limit
             sources = [meta.get("source", "") for meta in all_data.get("metadatas", [])]
             unique_docs = len(set(sources))
             
@@ -492,8 +492,14 @@ async def get_vectorstore_stats():
                     doc_types["constitution"] = doc_types.get("constitution", 0) + 1
                 elif "bns" in source.lower():
                     doc_types["bns"] = doc_types.get("bns", 0) + 1
+                elif "bnss" in source.lower():
+                    doc_types["bnss"] = doc_types.get("bnss", 0) + 1
+                elif "bsa" in source.lower():
+                    doc_types["bsa"] = doc_types.get("bsa", 0) + 1
                 elif "ipc" in source.lower() or "penal" in source.lower():
                     doc_types["ipc"] = doc_types.get("ipc", 0) + 1
+                elif "crpc" in source.lower() or "criminal procedure" in source.lower():
+                    doc_types["crpc"] = doc_types.get("crpc", 0) + 1
                 elif "supreme" in source.lower():
                     doc_types["supreme_court"] = doc_types.get("supreme_court", 0) + 1
                 elif "high" in source.lower():
@@ -754,7 +760,8 @@ async def health_check():
             "components": {
                 "chromadb": {"status": "healthy", "queryable": chroma_healthy},
                 "embedding_model": {"status": "loaded", "model": config["embedding"]["model_name"]},
-                "data_folder": {"status": "accessible", "path": DATA_DIR, "pdf_count": pdf_count}
+                "vector_store": {"status": "loaded", "chunks": vector_store._collection.count()},
+                "data_folder": {"status": "loaded", "path": DATA_DIR, "pdf_count": pdf_count}
             },
             "statistics": {
                 "total_pdfs": pdf_count,
